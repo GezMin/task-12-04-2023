@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="calc">
+            <div class="container">
+                <div class="calc__wrapper">
+                    <div class="item">
+                        <div class="calc__descr">
+                            Мои расходы на оборудование и материалы на<br />
+                            один объект (в среднем):
+                        </div>
+                        <div class="calc__form">сумма в руб.</div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="item">
+                        <div class="calc__descr">-основные средства (генераторы, спецтехника и пр.)</div>
+                        <div class="calc__form"><input type="number" value="10000" id="resources" />₽</div>
+                    </div>
+                    <div class="item">
+                        <div class="calc__descr">-материалы</div>
+                        <div class="calc__form"><input type="number" value="4000" id="material" />₽</div>
+                    </div>
+                    <div class="item">
+                        <div class="calc__descr">-малоценка</div>
+                        <div class="calc__form"><input type="number" value="1500" id="smallPrice" />₽</div>
+                    </div>
+                    <div class="item">
+                        <div class="calc__descr">Количество объектов в году</div>
+                        <div class="calc__form-obj"><input type="number" value="6" /></div>
+                    </div>
+                    <div class="divider"></div>
+                </div>
+                <div class="calc__wrapper">
+                    <h3>С использованием FaceKIT</h3>
+                    <div class="item-result">
+                        <div class="calc__descr"></div>
+                        <div class="calc__obj">Объектов:1</div>
+                        <div class="calc__obj-sum">Объектов: <span class="object">6</span></div>
+                    </div>
+                    <div class="item-result">
+                        <div class="calc__descr">сохранили парк ТМЦ на сумму</div>
+                        <div class="calc__obj save-without-kit">0</div>
+                        <div class="calc__obj-sum save-without-kit-obj">0</div>
+                    </div>
+                    <div class="item-result">
+                        <div class="calc__descr">потеряли ТМЦ на сумму</div>
+                        <div class="calc__obj lost-without-kit">0</div>
+                        <div class="calc__obj-sum lost-without-kit-obj">0</div>
+                    </div>
+
+                    <div class="divider"></div>
+                    <h3>Без FaceKIT</h3>
+                    <div class="item-result">
+                        <div class="calc__descr"></div>
+                        <div class="calc__obj">Объектов:1</div>
+                        <div class="calc__obj-sum">Объектов: <span class="object">6</span></div>
+                    </div>
+                    <div class="item-result">
+                        <div class="calc__descr">сохранили парк ТМЦ на сумму</div>
+                        <div class="calc__obj save-with-kit">0</div>
+                        <div class="calc__obj-sum save-with-kit-obj">0</div>
+                    </div>
+                    <div class="item-result">
+                        <div class="calc__descr">потеряли ТМЦ на сумму</div>
+                        <div class="calc__obj lost-with-kit">0</div>
+                        <div class="calc__obj-sum lost-with-kit-obj">0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="calc">
+            <div class="container">
+                <div class="calc__wrapper-itog">
+                    <h3>Ваша выгода благодаря FaceKIT составит:</h3>
+                    <div class="item-result">
+                        <div class="calc__descr result-itog">0</div>
+                        <div class="calc__obj">Объектов: 1</div>
+                    </div>
+                    <div class="item-result">
+                        <div class="calc__descr result-itog-obj">0</div>
+                        <div class="calc__obj-sum">Объектов: <span class="object">6</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
