@@ -18,6 +18,8 @@ const lostWithKitObj = document.querySelector('.lost-with-kit-obj')
 const resultItog = document.querySelector('.result-itog')
 const resultItogObj = document.querySelector('.result-itog-obj')
 
+const calcBtn = document.querySelector('.calc__btn button')
+
 const changeSum = () => {
     let arr = [
         parseInt(formObj.value),
@@ -47,19 +49,19 @@ const changeSum = () => {
 
 changeSum()
 
-resources.addEventListener('input', e => {
-    changeSum()
-})
+// resources.addEventListener('input', e => {
+//     changeSum()
+// })
 
-material.addEventListener('input', e => {
-    changeSum()
-})
+// material.addEventListener('input', e => {
+//     changeSum()
+// })
 
-smallPrice.addEventListener('input', e => {
-    changeSum()
-})
+// smallPrice.addEventListener('input', e => {
+//     changeSum()
+// })
 
-formObj.addEventListener('input', e => {
+calcBtn.addEventListener('click', e => {
     changeSum()
     let num = formObj.value
     formObjHtml.forEach(item => {

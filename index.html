@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <link href="fonts/stylesheet.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="style.css" />
         <title>Калькулятор</title>
@@ -50,84 +51,145 @@
                 </div>
             </header>
             <main>
-                <div class="calc">
-                    <div class="container">
-                        <div class="calc__wrapper">
-                            <div class="item">
-                                <div class="calc__descr">
-                                    Мои расходы на оборудование и материалы на<br />
-                                    один объект (в среднем):
+                <div class="main__wrapper">
+                    <div class="main__title">
+                        Рассчитайте самостоятельно, сколько вы сэкономите за год, используя сервис учета
+                        <span>FaceKIT</span>
+                    </div>
+
+                    <div class="calc__wrapper">
+                        <div class="calc__wrapper-calc">
+                            <div class="calc__title">
+                                Мои расходы на оборудование и материалы на один объект (в среднем):
+                            </div>
+                            <div class="calc__field">
+                                <div class="calc__field-text">
+                                    <img src="./img/plus.svg" alt="plus" />
+                                    <div class="">Основные средства<br />(генераторы, спецтехника и пр.)</div>
                                 </div>
-                                <div class="calc__form">сумма в руб.</div>
+
+                                <div class="calc__field-input">
+                                    <input value="10000" type="number" id="resources" /><span>₽</span>
+                                </div>
                             </div>
-                            <div class="divider"></div>
-                            <div class="item">
-                                <div class="calc__descr">-основные средства (генераторы, спецтехника и пр.)</div>
-                                <div class="calc__form"><input type="number" value="10000" id="resources" />₽</div>
+                            <div class="calc__field">
+                                <div class="calc__field-text">
+                                    <img src="./img/plus.svg" alt="plus" />
+                                    <div class="">Материалы</div>
+                                </div>
+
+                                <div class="calc__field-input">
+                                    <input value="4000" type="number" id="material" /><span>₽</span>
+                                </div>
                             </div>
-                            <div class="item">
-                                <div class="calc__descr">-материалы</div>
-                                <div class="calc__form"><input type="number" value="4000" id="material" />₽</div>
+                            <div class="calc__field">
+                                <div class="calc__field-text">
+                                    <img src="./img/plus.svg" alt="plus" />
+                                    <div class="">Малоценка</div>
+                                </div>
+
+                                <div class="calc__field-input">
+                                    <input value="1500" type="number" id="smallPrice" /><span>₽</span>
+                                </div>
                             </div>
-                            <div class="item">
-                                <div class="calc__descr">-малоценка</div>
-                                <div class="calc__form"><input type="number" value="1500" id="smallPrice" />₽</div>
+                            <div class="calc__field">
+                                <div class="calc__field-text">
+                                    <img src="./img/plus.svg" alt="plus" />
+                                    <div class="">Количество объектов в году</div>
+                                </div>
+
+                                <div class="calc__field-input calc__form-obj">
+                                    <input value="6" type="number" />
+                                </div>
                             </div>
-                            <div class="item">
-                                <div class="calc__descr">Количество объектов в году</div>
-                                <div class="calc__form-obj"><input type="number" value="6" /></div>
-                            </div>
-                            <div class="divider"></div>
                         </div>
-                        <div class="calc__wrapper">
-                            <h3>С использованием FaceKIT</h3>
-                            <div class="item-result">
-                                <div class="calc__descr"></div>
-                                <div class="calc__obj">Объектов:1</div>
-                                <div class="calc__obj-sum">Объектов: <span class="object">6</span></div>
+                        <div class="calc__btn"><button>Рассчитать</button></div>
+                        <div class="price-title">Результаты расчета</div>
+
+                        <div class="price-result">
+                            <div></div>
+                            <div class="background-grey border-radius-top">
+                                <div class="price-result__title price-result__grey">Без FaceKIT</div>
                             </div>
-                            <div class="item-result">
-                                <div class="calc__descr">сохранили парк ТМЦ на сумму</div>
-                                <div class="calc__obj save-without-kit">0</div>
-                                <div class="calc__obj-sum save-without-kit-obj">0</div>
+                            <div class="background-orange border-radius-top">
+                                <div class="price-result__title">С использованием<br />FaceKIT</div>
                             </div>
-                            <div class="item-result">
-                                <div class="calc__descr">потеряли ТМЦ на сумму</div>
-                                <div class="calc__obj lost-without-kit">0</div>
-                                <div class="calc__obj-sum lost-without-kit-obj">0</div>
+                            <div></div>
+                            <div class="background-grey">
+                                <div class="price-result__object">1 объект</div>
+                            </div>
+                            <div class="background-orange">
+                                <div class="price-result__object">1 объект</div>
+                            </div>
+                            <div class="price-result__descr">
+                                <img class="price-result__img" src="./img/vector.svg" alt="benefits" />
+                                <div class="price-result__text">Сохранили парк<br />ТМЦ на сумму</div>
+                            </div>
+                            <div class="background-grey">
+                                <div class="price-result__price save-without-kit">10 250 ₽</div>
+                            </div>
+                            <div class="background-orange">
+                                <div class="price-result__price save-with-kit">15 350 ₽</div>
+                            </div>
+                            <div class="price-result__row-border"></div>
+                            <div class="price-result__descr">
+                                <img class="price-result__img" src="./img/vector.svg" alt="benefits" />
+                                <div class="price-result__text">Потеряли ТМЦ<br />на сумму</div>
+                            </div>
+                            <div class="background-grey">
+                                <div class="price-result__price lost-without-kit">5 250 ₽</div>
+                            </div>
+                            <div class="background-orange">
+                                <div class="price-result__price lost-with-kit">150 ₽</div>
+                            </div>
+                            <div class="price-result__row-border"></div>
+                            <div></div>
+                            <div class="background-grey">
+                                <div class="price-result__object">Объектов: <span class="object">6</span></div>
+                            </div>
+                            <div class="background-orange">
+                                <div class="price-result__object">Объектов: <span class="object">6</span></div>
+                            </div>
+                            <div class="price-result__descr">
+                                <img class="price-result__img" src="./img/vector.svg" alt="benefits" />
+                                <div class="price-result__text">Сохранили парк<br />ТМЦ на сумму</div>
+                            </div>
+                            <div class="background-grey">
+                                <div class="price-result__price save-without-kit-obj">61 500 ₽</div>
+                            </div>
+                            <div class="background-orange">
+                                <div class="price-result__price save-with-kit-obj">92 100 ₽</div>
+                            </div>
+                            <div class="price-result__row-border"></div>
+                            <div class="price-result__descr">
+                                <img class="price-result__img" src="./img/vector.svg" alt="benefits" />
+                                <div class="price-result__text">Потеряли ТМЦ<br />на сумму</div>
+                            </div>
+                            <div class="background-grey">
+                                <div class="price-result__price lost-without-kit-obj">31 500 ₽</div>
+                            </div>
+                            <div class="background-orange">
+                                <div class="price-result__price lost-with-kit-obj">900 ₽</div>
+                            </div>
+                            <div class="price-result__row-border"></div>
+                            <div></div>
+                            <div class="background-grey border-radius-bottom">
+                                <div class="price-result__price"></div>
+                            </div>
+                            <div class="background-orange border-radius-bottom">
+                                <div class="price-result__price"></div>
                             </div>
 
-                            <div class="divider"></div>
-                            <h3>Без FaceKIT</h3>
-                            <div class="item-result">
-                                <div class="calc__descr"></div>
-                                <div class="calc__obj">Объектов:1</div>
-                                <div class="calc__obj-sum">Объектов: <span class="object">6</span></div>
+                            <div class="result-benefit">
+                                <div class="result-benefit__text">Ваша выгода благодаря FaceKIT составит</div>
                             </div>
-                            <div class="item-result">
-                                <div class="calc__descr">сохранили парк ТМЦ на сумму</div>
-                                <div class="calc__obj save-with-kit">0</div>
-                                <div class="calc__obj-sum save-with-kit-obj">0</div>
+                            <div class="benefit-margin-top">
+                                <div class="result-benefit__subtitle">1 объект</div>
+                                <div class="result-benefit__sum calc__descr result-itog">5 100 ₽</div>
                             </div>
-                            <div class="item-result">
-                                <div class="calc__descr">потеряли ТМЦ на сумму</div>
-                                <div class="calc__obj lost-with-kit">0</div>
-                                <div class="calc__obj-sum lost-with-kit-obj">0</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="calc">
-                    <div class="container">
-                        <div class="calc__wrapper-itog">
-                            <h3>Ваша выгода благодаря FaceKIT составит:</h3>
-                            <div class="item-result">
-                                <div class="calc__descr result-itog">0</div>
-                                <div class="calc__obj">Объектов: 1</div>
-                            </div>
-                            <div class="item-result">
-                                <div class="calc__descr result-itog-obj">0</div>
-                                <div class="calc__obj-sum">Объектов: <span class="object">6</span></div>
+                            <div class="benefit-margin-top">
+                                <div class="result-benefit__subtitle">Объектов: <span class="object">6</span></div>
+                                <div class="result-benefit__sum result-itog-obj">30 600 ₽</div>
                             </div>
                         </div>
                     </div>

@@ -60,6 +60,7 @@ p {
     align-items: center;
     justify-content: space-between;
     padding: 15px;
+    background: #efeff1;
 }
 
 .header__wrapper-left {
@@ -404,15 +405,7 @@ p {
     font-size: 20px;
     width: 170px;
 }
-.calc__form input,
-.calc__form-obj input {
-    font-size: 20px;
-    margin: 10px;
-    padding: 10px 15px;
-    height: 35px;
-    width: 130px;
-    border: 1px solid #ccc;
-}
+
 h3 {
     text-align: center;
 }
@@ -447,6 +440,246 @@ h3 {
     font-weight: 700;
 }
 
+/* calc */
+.main__wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.main__title {
+    font-size: 52px;
+    font-family: 'MuseoSansCyrl-300';
+    margin-top: 50px;
+}
+
+.main__title > span {
+    font-weight: bold;
+}
+
+.calc__wrapper {
+    width: 1000px;
+    margin: 75px auto;
+    box-shadow: 0 4px 250px rgba(0, 0, 0, 0.05);
+    border-radius: 50px;
+    background: #fff;
+    padding: 85px 25px;
+}
+
+.calc__title {
+    width: 460px;
+    font-size: 31px;
+}
+
+.calc__field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    gap: 30px;
+}
+
+.calc__field-text > img {
+    height: 21px;
+    margin-right: 10px;
+    padding-top: 4px;
+}
+
+.calc__btn {
+    margin-top: 40px;
+    text-align: center;
+}
+.calc__btn button {
+    cursor: pointer;
+}
+
+.calc__btn button:hover {
+    background-color: var(--main-color);
+    color: #000;
+    transition: all 0.3s ease-in-out;
+}
+
+.calc__field-text {
+    font-size: 23px;
+    display: flex;
+    align-items: baseline;
+}
+
+.calc__field-input {
+    width: 225px;
+    font-size: 23px;
+}
+
+.calc__field-input span {
+    margin-left: 10px;
+}
+
+.calc__field-input input {
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    background: #f1f1f1;
+    border: 1px solid #b6b6b6;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.calc__btn button {
+    width: 350px;
+    height: 75px;
+    color: #ffffff;
+    font-size: 30px;
+    font-family: 'MuseoSansCyrl-500';
+    background: #a0cc9d;
+    border-radius: 50px;
+    border: none;
+}
+
+.price-title {
+    font-size: 30px;
+    text-align: center;
+    font-family: 'MuseoSansCyrl-700';
+    margin-top: 60px;
+}
+
+.result-benefit {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+
+.benefit-margin-top {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.result-benefit__text {
+    font-size: 24px;
+    font-family: 'MuseoSansCyrl-700';
+}
+
+.result-benefit__subtitle {
+    background: #f2f2f2;
+    border-radius: 15px;
+    padding: 9px;
+    font-size: 19px;
+    text-align: center;
+    height: fit-content;
+}
+
+.result-benefit__sum {
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    color: #a0cc9d;
+    margin-top: 10px;
+}
+
+.background-grey {
+    background-color: #f2f2f2;
+    width: 270px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px;
+}
+
+.border-radius-top {
+    border-radius: 24px 24px 0px 0px;
+}
+
+.border-radius-bottom {
+    border-radius: 0px 0px 24px 24px;
+}
+
+.calc__wrapper-calc {
+    padding: 0 75px;
+}
+
+.background-orange {
+    background-color: #ffdf6f;
+    width: 310px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px;
+}
+
+.price-result {
+    display: grid;
+    margin-top: 50px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(11, min-content);
+    column-gap: 10px;
+    align-items: center;
+    justify-items: center;
+    grid-template-areas:
+        '. . .'
+        '. . .'
+        '. . .'
+        '. . .'
+        '. . .'
+        '. . .'
+        '. . .'
+        '. . .'
+        '. . .'
+        '. . .'
+        '. . .';
+}
+
+.price-result__img {
+    height: 24px;
+    padding-top: 4px;
+}
+
+.price-result__title {
+    font-size: 22px;
+    text-align: center;
+    font-family: 'MuseoSansCyrl-700';
+    margin-top: 15px;
+}
+
+.price-result__price {
+    font-size: 22px;
+    text-align: center;
+    font-family: 'MuseoSansCyrl-700';
+    margin-top: 10px;
+}
+
+.price-result__descr {
+    font-size: 19px;
+    display: flex;
+    justify-self: baseline;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.price-result__text {
+    margin-left: 10px;
+}
+
+.price-result__row-border {
+    width: 100%;
+    border-top: 1px dotted gray;
+    grid-column: 1 / 4;
+    border-top: 2px solid #ebebeb;
+}
+
+.price-result__object {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 7px;
+    font-size: 19px;
+    text-align: center;
+    height: fit-content;
+    width: fit-content;
+}
+
 @media (max-width: 730px) {
     .header__descr {
         display: none;
@@ -479,6 +712,7 @@ h3 {
         padding-left: 10px;
     }
 }
+
 @media (max-width: 500px) {
     .header__wrapper {
         flex-direction: column;
@@ -496,7 +730,4 @@ h3 {
     .header__wrapper {
         padding: 15px 0 0;
     }
-}
-
-@media (max-width: 730px) {
 }
