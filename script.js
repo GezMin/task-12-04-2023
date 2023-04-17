@@ -29,24 +29,28 @@ const changeSum = () => {
         parseFloat(smallPrice.value),
     ]
 
+    function numberWithSpaces(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
+    }
+
     if (arr.every(val => val && val !== 0 && val !== '.')) {
         error.innerHTML = ''
         let sum = ((arr[1] + arr[2]) * 70) / 100 + (arr[3] * 30) / 100
-        saveWithoutKit.innerHTML = Math.round(sum) + ' ₽'
+        saveWithoutKit.innerHTML = numberWithSpaces(Math.round(sum)) + ' ₽'
         let sumlost = arr[1] + arr[2] + arr[3] - sum
-        lostWithoutKit.innerHTML = Math.round(sumlost) + ' ₽'
-        saveWithoutKitObj.innerHTML = Math.round(sum * arr[0]) + ' ₽'
-        lostWithoutKitObj.innerHTML = Math.round(sumlost * arr[0]) + ' ₽'
+        lostWithoutKit.innerHTML = numberWithSpaces(Math.round(sumlost)) + ' ₽'
+        saveWithoutKitObj.innerHTML = numberWithSpaces(Math.round(sum * arr[0])) + ' ₽'
+        lostWithoutKitObj.innerHTML = numberWithSpaces(Math.round(sumlost * arr[0])) + ' ₽'
 
         let sumKit = arr[1] + arr[2] + (arr[3] * 90) / 100
-        saveWithKit.innerHTML = Math.round(sumKit) + ' ₽'
+        saveWithKit.innerHTML = numberWithSpaces(Math.round(sumKit)) + ' ₽'
         let sumlostKit = arr[1] + arr[2] + arr[3] - sumKit
-        lostWithKit.innerHTML = Math.round(sumlostKit) + ' ₽'
-        saveWithKitObj.innerHTML = Math.round(sumKit * arr[0]) + ' ₽'
-        lostWithKitObj.innerHTML = Math.round(sumlostKit * arr[0]) + ' ₽'
+        lostWithKit.innerHTML = numberWithSpaces(Math.round(sumlostKit)) + ' ₽'
+        saveWithKitObj.innerHTML = numberWithSpaces(Math.round(sumKit * arr[0])) + ' ₽'
+        lostWithKitObj.innerHTML = numberWithSpaces(Math.round(sumlostKit * arr[0])) + ' ₽'
 
-        resultItog.innerHTML = Math.round(sumlost - sumlostKit) + ' ₽'
-        resultItogObj.innerHTML = Math.round(sumlost - sumlostKit) * arr[0] + ' ₽'
+        resultItog.innerHTML = numberWithSpaces(Math.round(sumlost - sumlostKit)) + ' ₽'
+        resultItogObj.innerHTML = numberWithSpaces(Math.round(sumlost - sumlostKit) * arr[0]) + ' ₽'
 
         return arr
     } else {
